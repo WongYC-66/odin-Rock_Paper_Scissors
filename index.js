@@ -20,10 +20,6 @@ function playRound(playerSelection, computerSelection){
     if(player === afraid_of[comp]) return `You Lose! ${player} beaten by ${comp}`
 }
 
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));
-
 function game(){
     let playerScore = 0;
     let computerScore = 0;
@@ -37,12 +33,12 @@ function game(){
         if(result.split("!")[0] == 'You Lose') computerScore++
     }
 
-    console.log({playerScore, computerScore})
     // Report out winner!
+    console.log({playerScore, computerScore})
     let game_msg = ""
-    if(playerScore > computerScore) game_msg =  "You won!" 
-    if(computerScore > playerScore) game_msg = "You lose!" 
-    if(computerScore == playerScore) game_msg = "Tie!" 
+    if(playerScore > computerScore) game_msg =  "You won the game!" 
+    if(computerScore > playerScore) game_msg = "You lose the game!" 
+    if(computerScore == playerScore) game_msg = "Tie, try again?" 
 
     console.log(game_msg)
     return game_msg
