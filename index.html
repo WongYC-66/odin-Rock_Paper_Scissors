@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            background-color: lightblue;
+            text-align: center;
+        }
+        img{
+            width : 150px;
+            border: 15px solid pink;
+            border-radius: 15px;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    It might be empty now!. check F12
+    <div class="container">
+        <h1>Simple Rock Paper Scissors Game</h1>
+        <div>You : <span id="humanScore"> 0 </span> | Computer : <span id="computerScore"> 0 </span></div>
+        <hr>
+        <img id='rock' src="./images/rock.png" alt="rock">
+        <img id='paper' src="./images/paper.png" alt="paper">
+        <img id='scissors' src="./images/scissors.png" alt="scissors">
+        <div id="gameText"></div>
+        <br>
+        <div id="winnerText" style="color: red; font-size: 32px;"></div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
